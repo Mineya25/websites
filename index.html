@@ -206,8 +206,10 @@
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 15px;
         }
 
         .section-title {/* Our Ai Solution Title*/
@@ -414,13 +416,13 @@
             max-width: 600px;
             margin: 3rem auto 0;
             background: radial-gradient(circle at top right, #041b4d, #133072);
-            padding: 4rem 2rem;
+            padding: 2rem 1rem;
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(248, 245, 245, 0.863);
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr; /* ✅ FORCE single column */
+            gap: 1.5rem;
         }
 
         .form-group {
