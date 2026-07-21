@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About M Sky Flow Tech</title>
+  <meta name="description" content="Learn about M Sky Flow Tech and how we help enterprises and local businesses keep pace with technology through practical AI and automation.">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg2: #1e3a8a;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #4b5563;
+      --accent: #cc7b1e;
+      --accent2: #3b82f6;
+      --border: #e5e7eb;
+      --soft: #eff6ff;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: #f8fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        color: white;
+        padding: .10rem 2rem;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--border);
+                
+    }
+
+    .topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: .1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-decoration: none;
+        color: white;
+        letter-spacing: -0.5px;
+    }
+
+
+    .back-link {
+      display: inline-block;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      background: #e29135;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top right, #1e40af, #0f172a);
+      color: var(--white);
+      padding: 5.5rem 1.25rem 4rem;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #dbeafe;
+      max-width: 840px;
+      line-height: 1.8;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.25rem 5rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: var(--bg);
+    }
+
+    .section p {
+      color: var(--muted);
+      max-width: 900px;
+      line-height: 1.8;
+      font-size: 1.02rem;
+    }
+
+    .story {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .story p + p {
+      margin-top: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+      color: var(--bg2);
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .list {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .list-item {
+      background: var(--soft);
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+
+    .quote {
+      margin-top: 1rem;
+      padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+      border-left: 4px solid var(--accent);
+      background: #fff7ed;
+      border-radius: 10px;
+      color: #7c2d12;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .cta {
+      margin-top: 1rem;
+      padding: 2rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #fff;
+    }
+
+    .cta h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: #fff;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.92);
+      max-width: 800px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.9rem 1.3rem;
+      border-radius: 10px;
+      background: #e29135;
+      color: #000;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 4.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="https://mskyflowtech.com/" class="logo">
+            <img src="logo.png" width="150" height="=200" alt="MSky Flow Tech">
+          </a>
+      </div>
+      <a class="back-link" href="index.html">Back to Home</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">About Us</span>
+      <h1>Helping businesses keep pace with a changing world.</h1>
+      <p>
+        M Sky Flow Tech was founded to bridge the gap between business and technology. We help enterprises and local businesses
+        move forward with clarity, confidence, and practical AI solutions built for the pace of today’s world.
+      </p>
+    </div>
+  </section>
+
+  <main class="content">
+    <section class="section">
+      <div class="story">
+        <h2>Our story</h2>
+        <p>
+          We started M Sky Flow Tech last year because we saw a widening gap between how quickly technology is evolving and how hard it can be for businesses to keep up.
+          Too many organizations are expected to adapt fast without the right guidance, the right tools, or a clear path forward.
+        </p>
+        <p>
+          We wanted to build something different: a company that helps businesses adopt technology in a way that feels understandable, useful, and grounded in real operations.
+          Our work is about making technology feel less overwhelming and more empowering.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What we believe</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Technology should serve people</h3>
+          <p>
+            Good systems should make work easier, not more confusing. We believe the best solutions support the people who use them every day.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Progress should feel practical</h3>
+          <p>
+            We value solutions that create real business value, improve efficiency, and fit into the way a company actually works.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Change should feel manageable</h3>
+          <p>
+            The pace of change is only getting faster. We help businesses respond with structure, clarity, and confidence instead of chaos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Who we serve</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Enterprise organizations</h3>
+          <p>
+            We work with larger organizations that need thoughtful solutions for complex systems, multiple teams, and long-term growth.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Local and growing businesses</h3>
+          <p>
+            We help local businesses and growing companies stay competitive by simplifying operations and improving visibility into their work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How we help</h2>
+      <div class="list">
+        <div class="list-item">Workflow automation</div>
+        <div class="list-item">Business intelligence</div>
+        <div class="list-item">AI audits</div>
+        <div class="list-item">Custom AI projects</div>
+        <div class="list-item">Operational clarity</div>
+        <div class="list-item">Secure implementation</div>
+      </div>
+      <div class="quote">
+        “We believe every business deserves a path into the future that is practical, understandable, and built to last.”
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Let’s build what comes next</h2>
+      <p>
+        If your business wants to stay current without losing focus on what matters, M Sky Flow Tech is here to help.
+      </p>
+      <a href="index.html#contact" class="back-link">Schedule consultation</a>
+    </section>
+  </main>
+</body>
+</html>
