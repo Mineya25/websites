@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About M Sky Flow Tech</title>
-  <meta name="description" content="Learn about M Sky Flow Tech and how we help enterprises and local businesses keep pace with technology through practical AI and automation.">
+  <meta name="description" content="Learn about M Sky Flow Tech and how we help enterprises and local businesses keep pace with technology through practical AI and automation." />
 
   <style>
     :root {
@@ -39,44 +39,55 @@
     }
 
     .topbar {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(8px);
-        color: white;
-        padding: .10rem 2rem;
-        position: sticky;
-        width: 100%;
-        top: 0;
-        z-index: 100;
-        border-bottom: 1px solid var(--border);
-                
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.45rem 1rem;
+      position: sticky;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
     }
 
     .topbar-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: .1rem 1.25rem;
+      padding: 0.15rem 0.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.75rem;
+      flex-wrap: nowrap;
     }
 
     .brand {
-        font-size: 1.5rem;
-        font-weight: 800;
-        text-decoration: none;
-        color: white;
-        letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      flex: 0 1 auto;
+      min-width: 0;
     }
 
+    .brand img {
+      display: block;
+      max-width: 150px;
+      height: auto;
+    }
 
     .back-link {
-      display: inline-block;
-      padding: 0.8rem 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      flex: 0 0 auto;
+      padding: 0.8rem 1.05rem;
       border-radius: 10px;
       background: #e29135;
       color: #000;
       font-weight: 700;
+    }
+
+    .back-link:hover {
+      background: #cc7b1e;
     }
 
     .hero {
@@ -233,9 +244,25 @@
     }
 
     @media (max-width: 768px) {
+      .topbar {
+        padding: 0.35rem 0.75rem;
+      }
+
       .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+      }
+
+      .brand img {
+        max-width: 110px;
+      }
+
+      .back-link {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.92rem;
       }
 
       .hero {
@@ -248,9 +275,9 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <a href="https://mskyflowtech.com/" class="logo">
-            <img src="logo.png" width="150" height="=200" alt="MSky Flow Tech">
-          </a>
+        <a href="https://mskyflowtech.com/">
+          <img src="logo.png" width="150" height="200" alt="MSky Flow Tech">
+        </a>
       </div>
       <a class="back-link" href="index.html">Back to Home</a>
     </div>
@@ -261,8 +288,7 @@
       <span class="eyebrow">About Us</span>
       <h1>Helping businesses keep pace with a changing world.</h1>
       <p>
-        M Sky Flow Tech was founded to bridge the gap between business and technology. We help enterprises and local businesses
-        move forward with clarity, confidence, and practical AI solutions built for the pace of today’s world.
+        M Sky Flow Tech was founded to bridge the gap between business and technology. We help enterprises and local businesses move forward with clarity, confidence, and practical AI solutions built for the pace of today’s world.
       </p>
     </div>
   </section>
@@ -272,12 +298,10 @@
       <div class="story">
         <h2>Our story</h2>
         <p>
-          We started M Sky Flow Tech last year because we saw a widening gap between how quickly technology is evolving and how hard it can be for businesses to keep up.
-          Too many organizations are expected to adapt fast without the right guidance, the right tools, or a clear path forward.
+          We started M Sky Flow Tech last year because we saw a widening gap between how quickly technology is evolving and how hard it can be for businesses to keep up. Too many organizations are expected to adapt fast without the right guidance, the right tools, or a clear path forward.
         </p>
         <p>
-          We wanted to build something different: a company that helps businesses adopt technology in a way that feels understandable, useful, and grounded in real operations.
-          Our work is about making technology feel less overwhelming and more empowering.
+          We wanted to build something different: a company that helps businesses adopt technology in a way that feels understandable, useful, and grounded in real operations. Our work is about making technology feel less overwhelming and more empowering.
         </p>
       </div>
     </section>
@@ -291,14 +315,12 @@
             Good systems should make work easier, not more confusing. We believe the best solutions support the people who use them every day.
           </p>
         </div>
-
         <div class="card">
           <h3>Progress should feel practical</h3>
           <p>
             We value solutions that create real business value, improve efficiency, and fit into the way a company actually works.
           </p>
         </div>
-
         <div class="card">
           <h3>Change should feel manageable</h3>
           <p>
@@ -317,7 +339,6 @@
             We work with larger organizations that need thoughtful solutions for complex systems, multiple teams, and long-term growth.
           </p>
         </div>
-
         <div class="card">
           <h3>Local and growing businesses</h3>
           <p>
@@ -347,7 +368,7 @@
       <p>
         If your business wants to stay current without losing focus on what matters, M Sky Flow Tech is here to help.
       </p>
-      <a href="index.html#contact" class="back-link">Schedule consultation</a>
+      <a href="index.html#contact">Schedule consultation</a>
     </section>
   </main>
 </body>
